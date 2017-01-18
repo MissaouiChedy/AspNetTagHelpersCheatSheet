@@ -1,6 +1,6 @@
 # AspNetTagHelpersCheatSheet
 
-Full code for the [Basic tag helpers creation cheat sheet](http://blog.techdominator.com/article/aspnet-core-tag-helpers-creation-cheat-sheet.html) on the TechDominator Blog.
+Full code for the [Basic tag helpers creation cheat sheet](http://blog.techdominator.com/article/basic-tag-helpers-creation-cheat-sheet.html) on the TechDominator Blog.
 
 # Guidelines
 
