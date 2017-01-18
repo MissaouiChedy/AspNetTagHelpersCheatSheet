@@ -6,6 +6,8 @@ namespace AspNetTagHelpersCheatSheet.TagHelpers
     [HtmlTargetElement("p")]
     public class StandardHtmlElementTagHelper : TagHelper
     {
+        public override int Order { get; } = int.MinValue;
+        
         public override async Task ProcessAsync(TagHelperContext context, TagHelperOutput output)
         {
             TagHelperContent content = null;
