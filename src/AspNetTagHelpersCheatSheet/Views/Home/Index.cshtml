@@ -1,5 +1,7 @@
-﻿@{
+﻿@using AspNetTagHelpersCheatSheet.TagHelpers;
+@{
     ViewData["Title"] = "Home Page";
+    int someNumber = 2149;
 }
 
 <div class="container" style="margin-top:5em">
@@ -16,4 +18,10 @@
 
     <p>Initial Content</p>
     <hr />
+
+    <with-arguments number-arg="someNumber" 
+                    string-arg="Kablam" 
+                    object-arg="new Holder { Id = 404 }">
+
+    </with-arguments>
 </div>
