@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Razor.TagHelpers;
+using System.Threading.Tasks;
 
 namespace AspNetTagHelpersCheatSheet.TagHelpers
 {
@@ -13,9 +14,15 @@ namespace AspNetTagHelpersCheatSheet.TagHelpers
         public string StringArg { get; set; }
         public Holder ObjectArg { get; set; }
 
-        public override void Process(TagHelperContext context, TagHelperOutput output)
+        public override async Task ProcessAsync(TagHelperContext context, TagHelperOutput output)
         {
+            //set tag name
             output.TagName = "div";
+            //add html attributes
+            output.Attributes.SetAttribute(new TagHelperAttribute("class", "someclass"));
+            //retrieve initial content
+            var content = await output.GetChildContentAsync();
+            //use interpolated strings
             output.Content.SetHtmlContent($@"Number -> {NumberArg} 
 StringArg -> {StringArg} 
 ObjectArg.Id -> {ObjectArg.Id}");
